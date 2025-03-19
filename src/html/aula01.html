@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Linkagem -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="../img/front_icon.png">
+    <title>FrontEnd</title>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-house" viewBox="0 0 16 16">
+                <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+            </svg></a>
+        <a href="aula01.html">UI/UX</a>
+        <a href="aula02.html">Lógica</a>
+        <a href="aula03.html">Funções</a>
+        <a href="aula04.html">Array</a>
+        <a href="">Aula 05</a>
+    </header>
+
+    <!-- Temas Abordado -->
+    <section>
+        <main>
+            <h1>Usabilidade</h1>
+            <p>Usabilidade é a facilidade com que um usuário consegue interagir com um produto ou sistema. É um conceito
+                fundamental no design de produtos e serviços, especialmente no contexto digital. </p>
+        </main>
+    </section>
+
+    <!-- Alguns conceitos de usabilidade -->
+    <section>
+        <main>
+            <h1>5 Conceitos de usabilidade</h1>
+            <p>Ao pensar em usabilidade você deve se fazer 5 perguntas para avaliar seu sistema, seguindo alguns
+                princípios, que são:</p>
+            <ol>
+                <li>Aprendizado - Quão fácil é para um usuário aprender a usar o sistema pela primeira vez?</li>
+
+                <li>Eficiência – Depois de aprender, o usuário consegue realizar tarefas rapidamente?</li>
+
+                <li>Memorabilidade – Se um usuário ficar um tempo sem usar o sistema, ele conseguirá lembrar como
+                    utilizá-lo sem precisar reaprender tudo?</li>
+
+                <li>Erros – Quantos erros os usuários cometem, quão graves são esses erros e quão fácil é corrigi-los?
+                </li>
+
+                <li>Satisfação – O uso do sistema é agradável?</li>
+            </ol>
+        </main>
+    </section>
+
+    <!-- Canva -->
+    <section>
+        <main>
+            <h1>Design Canva</h1>
+                <div class="carrossel">
+                    <button onclick="anterior()"> < </button>
+                    <img id="carrossel" src="../img/Menu.png">
+                    <button onclick="proximo()"> > </button>
+                </div>
+        </main>
+    </section>
+
+    <script>
+        const imagens = [
+            "../img/Menu.png",
+            "../img/Guias.png",
+            "../img/Check-In.png",
+            "../img/Sobre.png",
+            "../img/Login.png",
+        ];
+
+        let indiceAtual = 0;
+        const imgElement = document.getElementById("carrossel");
+
+        function atualizarImagem() {
+            imgElement.src = imagens[indiceAtual];
+        }
+
+        function anterior() {
+            indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+            atualizarImagem();
+        }
+
+        function proximo() {
+            indiceAtual = (indiceAtual + 1) % imagens.length;
+            atualizarImagem();
+        }
+    </script>
+</body>
+
+</html>

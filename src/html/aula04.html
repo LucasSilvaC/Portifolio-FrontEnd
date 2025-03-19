@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Linkagem -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="../img/front_icon.png">
+    <title>FrontEnd</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="../../index.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-house" viewBox="0 0 16 16">
+                <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+            </svg></a>
+        <a href="aula01.html">UI/UX</a>
+        <a href="aula02.html">Lógica</a>
+        <a href="aula03.html">Funções</a>
+        <a href="aula04.html">Array</a>
+        <a href="">Aula 05</a>
+    </header>
+
+    <!-- Temas Abordado -->
+    <section>
+        <main>
+            <h1>O que é um Array</h1>
+            <p>Um array é uma estrutura de dados que armazena vários valores em uma única variável. Também é conhecido
+                como arranjo ou vetor.</p>
+        </main>
+    </section>
+
+    <!-- Array Callback -->
+    <section>
+        <main>
+            <h1>Arrays Callback</h1>
+            <p>Um callback é uma função que testa cada elemento de um array, e um array é uma estrutura que armazena
+                dados passada como
+                argumento para outra função. Alguns exemplos de arrays nessa ordem é: Callback, Find e Filter.</p>
+        </main>
+    </section>
+
+    <!-- Exercício 1 -->
+    <section>
+        <main>
+            <h1>Exercício 1 - Dobro de 5 números</h1>
+            <button onclick="exercicio()">Realizar</button>
+            <p id="resultado"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 2 -->
+    <section>
+        <main>
+            <h1>Exercício 2 - Média de 8 valores</h1>
+            <button onclick="exercicio2()">Realizar</button>
+            <p id="resultado_2"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 3 -->
+    <section>
+        <main>
+            <h1>Exercício 3 - Média de idade 20 pessoas</h1>
+            <button onclick="exercicio3()">Realizar</button>
+            <p id="resultado_3"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 4 -->
+    <section>
+        <main>
+            <h1>Exercício 4 - Valores pares</h1>
+            <button onclick="exercicio4()">Realizar</button>
+            <p id="resultado_4"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 5 -->
+    <section>
+        <main>
+            <h1>Exercício 5 - Consultar nome na lista</h1>
+            <button onclick="exercicio5()">Realizar</button>
+            <p id="resultado_5"></p>
+        </main>
+    </section>
+
+
+    <script>
+        // Exercicio 1
+        function exercicio() {
+            let numeros = [];
+            for (let i = 0; i < 5; i++) {
+                let num = parseInt(window.prompt(`Digite o ${i + 1}º número:`));
+                numeros.push(num);
+            }
+
+            let dobro = numeros.map(num => num * 2);
+            document.getElementById("resultado").innerHTML = `Números: ${numeros.join(", ")} <br> Dobro: ${dobro.join(", ")}`;
+        }
+
+        // Exercicio 2
+        function exercicio2() {
+            let numeros = [];
+            for (let i = 0; i < 8; i++) {
+                let num = parseFloat(window.prompt(`Digite o ${i + 1}º número:`));
+                numeros.push(num);
+            }
+
+            let soma = numeros.reduce((acc, num) => acc + num, 0);
+            let media = soma / numeros.length;
+
+            document.getElementById("resultado_2").innerHTML =
+                `Números: ${numeros.join(", ")} <br> Média: ${media.toFixed(2)}`;
+        }
+
+        // Exercicio 3
+        function exercicio3() {
+            let idades = [];
+            
+            for (let i = 0; i < 20; i++) {
+                let idade = parseInt(window.prompt(`Digite a idade da ${i + 1}ª pessoa:`));
+                idades.push(idade);
+            }
+
+            let soma = idades.reduce((acc, idade) => acc + idade, 0);
+            let media = soma / idades.length;
+            let acimaDaMedia = idades.filter(idade => idade > media);
+
+            document.getElementById("resultado_3").innerHTML = 
+                `Idades inseridas: ${idades.join(", ")} <br> 
+                Média: ${media.toFixed(2)} <br> 
+                Idades acima da média: ${acimaDaMedia.join(", ") || "Nenhuma"}`;
+        }
+
+        // Exercicio 4
+        function exercicio4() {
+            let numeros = [];
+
+            for (let i = 0; i < 10; i++) {
+                let num = parseInt(window.prompt(`Digite o ${i + 1}º número:`));
+                numeros.push(num);
+            }
+
+            let pares = numeros.filter(num => num % 2 === 0);
+
+            document.getElementById("resultado_4").innerHTML = 
+                `Números inseridos: ${numeros.join(", ")} <br> ` +
+                (pares.length > 0 ? `Números pares: ${pares.join(", ")}` : "Todos os números são ímpares.");
+        }
+
+        // Exercicio 5
+        function exercicio5() {
+            let nomes = ["Pedro", "Vinicius", "Lucas", "Rafael", "Jonathan", "Allison", "Alex", "João Pedro", "Roger", "Isaque"];
+            let nomeProcurado = window.prompt("Digite um nome para buscar:").trim();
+            let indice = nomes.indexOf(nomeProcurado);
+
+            document.getElementById("resultado_5").innerHTML = 
+                indice !== -1 
+                ? `Nome encontrado no indice: ${indice}` 
+                : "Nome não encontrado!";
+        }
+    </script>
+</body>
+</html>

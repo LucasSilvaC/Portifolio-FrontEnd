@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Linkagem -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="../img/front_icon.png">
+    <title>FrontEnd</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="../../index.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-house" viewBox="0 0 16 16">
+                <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+            </svg></a>
+        <a href="aula01.html">UI/UX</a>
+        <a href="aula02.html">Lógica</a>
+        <a href="aula03.html">Funções</a>
+        <a href="aula04.html">Array</a>
+        <a href="">Aula 05</a>
+    </header>
+
+    <!-- Temas Abordado -->
+    <section>
+        <main>
+            <h1>Funções em Javascript</h1>
+            <p style="font-size: 20px;">Em programação, uma função é um bloco de código que executa uma tarefa
+                específica. Pode ser reutilizada
+                sempre que necessário,
+                evitando a repetição de código. Existem dois tipos de funções as arrow functions e as funções normais,
+                abaixo estão alguns exercicios que utilizam algumas delas:</p>
+        </main>
+    </section>
+
+    <!-- Function -->
+    <section>
+        <main>
+            <h1>Function</h1>
+            <p style="font-size: 20px;">Uma função normal em JavaScript é declarada usando a palavra-chave function e
+                pode ter seu próprio contexto de parâmetros.
+                Ela é mais flexível, mas geralmente mais verbosa do que as arrow functions.</p>
+        </main>
+        <div class="cmd">
+            <div class="header-cmd">
+                <div class="dots">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <div class="title">Terminal - Simulação</div>
+            </div>
+            <div class="content">
+                <div class="line"> function soma(a, b) {</div>
+                <div class="line">return a + b;</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arrow Function -->
+    <section>
+        <main>
+            <h1>Arrow Function</h1>
+            <p style="font-size: 20px;">Uma arrow function é uma forma mais concisa de escrever funções em JavaScript,
+                usando a sintaxe () =>.
+                Ela não possui seu próprio parâmetro e é vazia, herdando-o do contexto onde foi definida.</p>
+        </main>
+        <div class="cmd">
+            <div class="header-cmd">
+                <div class="dots">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <div class="title">Terminal - Simulação</div>
+            </div>
+            <div class="content">
+                <div class="line">const soma = (a, b) => a + b;</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercício 1 -->
+    <section>
+        <main>
+            <h1>Exercício 1 - Calculadora</h1>
+            <label>Digite o primeiro número:</label>
+            <input type="number" id="num1_1">
+            <label>Digite o segundo número:</label>
+            <input type="number" id="num2_1">
+            <div class="calc">
+                <button onclick="calcular('+')">+</button>
+                <button onclick="calcular('-')">-</button>
+                <button onclick="calcular('*')">*</button>
+                <button onclick="calcular('/')">/</button>
+            </div>
+            <p id="resultado"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 2 -->
+    <section>
+        <main>
+            <h1>Exercício 2 - Inverter String</h1>
+            <label>Digite uma palavra:</label>
+            <input type="text" id="palavra_1">
+            <button onclick="exercicio2()">Inverter</button>
+            <p id="resultado_2"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 3 -->
+    <section>
+        <main>
+            <h1>Exercício 3 - Letras separadas da palavra</h1>
+            <label>Digite uma palavra:</label>
+            <input type="text" id="palavra_2">
+            <button onclick="exercicio3()">Calcular</button>
+            <p id="resultado_3"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 4 -->
+    <section>
+        <main>
+            <h1>Exercício 4 - Idade para CNH</h1>
+            <label>Digite sua idade:</label>
+            <input type="number" id="idade">
+            <button onclick="exercicio4()">Calcular</button>
+            <p id="resultado_4"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 5 -->
+    <section>
+        <main>
+            <h1>Exercício 5 - Ordem crescente</h1>
+            <label>Digite o primeiro número:</label>
+            <input type="number" id="num1_2">
+            <label>Digite o segundo número:</label>
+            <input type="number" id="num2_2">
+            <label>Digite o terceiro número:</label>
+            <input type="number" id="num3_2">
+            <button onclick="exercicio5()">Exibir</button>
+            <p id="resultado_5"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 6 -->
+    <section>
+        <main>
+            <h1>Exercício 6 - Conversor de horas</h1>
+            <label>Digite o horário desejado:</label>
+            <input type="number" id="horas" min="0">
+            <button onclick="exercicio6()">Calcular</button>
+            <p id="resultado_6"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 7 -->
+    <section>
+        <main>
+            <h1>Exercício 7 - Exibição de cédulas</h1>
+            <label>Digite o valor:</label>
+            <input type="number" id="dinheiro" min="0">
+            <button onclick="exercicio7()">Calcular</button>
+            <p id="resultado_7"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 8 -->
+    <section>
+        <main>
+            <h1>Exercício 8 - Raiz quadrada</h1>
+            <label>Digite um número:</label>
+            <input type="number" id="raiz" min="0">
+            <button onclick="exercicio8()">Verificar</button>
+            <p id="resultado_8"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 9 -->
+    <section>
+        <main>
+            <h1>Exercício 9 - Cadastro</h1>
+            <label>Nome:</label>
+            <input type="text" id="nome">
+            <label>Endereço:</label>
+            <input type="text" id="endereco">
+
+            <label>Sexo:</label>
+            <div class="radio-container">
+                <input type="radio" id="masc" name="sexo" value="masc">
+                <label for="masc">Masculino</label>
+
+                <input type="radio" id="fem" name="sexo" value="fem">
+                <label for="fem">Feminino</label>
+
+                <input type="radio" id="outro" name="sexo" value="outro">
+                <label for="outro">Outro</label>
+            </div>
+
+
+            <label>Telefone:</label>
+            <input type="num" id="telefone">
+            <label>Celular:</label>
+            <input type="num" id="celular">
+            <label>Email:</label>
+            <input type="text" id="email">
+            <button onclick="exercicio9()">Cadastrar</button>
+            <p id="resultado_9"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 10 -->
+    <section>
+        <main>
+            <h1>Exercício 10 - Imposto de Renda</h1>
+            <label>Digite seu salário:</label>
+            <input type="number" id="salario_renda">
+            <button onclick="exercicio10()">Calcular</button>
+            <p id="resultado_10"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 11 -->
+    <section>
+        <main>
+            <h1>Exercício 11 - Calculadora de INSS</h1>
+            <label>Digite seu salário:</label>
+            <input type="number" id="salario_inss">
+            <button onclick="calcularINSS()">Calcular INSS</button>
+            <p id="resultado_11"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 12 -->
+    <section>
+        <main>
+            <h1>Exercício 12 - Calculadora de Juros Compostos</h1>
+            <label>Capital Inicial (R$):</label>
+            <input type="number" id="capital" min="0">
+            <label>Taxa de Juros (% ao mês):</label>
+            <input type="number" id="taxa" min="0">
+            <label>Tempo (meses):</label>
+            <input type="number" id="tempo" min="1">
+            <button onclick="calcularJuros()">Calcular</button>
+            <p id="resultado_12"></p>
+        </main>
+    </section>
+
+    <!-- Exercício 13 -->
+    <section>
+        <main>
+            <h1>Exercício 13 - Simulador de Financiamento</h1>
+            <label>Valor do Financiamento (R$):</label>
+            <input type="number" id="financiamento" min="0">
+            <label>Taxa de Juros (% ao mês):</label>
+            <input type="number" id="taxa" min="0">
+            <label>Número de Parcelas:</label>
+            <input type="number" id="parcelas" min="1">
+            <button onclick="calcularParcela()">Calcular</button>
+            <p id="resultado_13"></p>
+        </main>
+    </section>
+
+
+    <script>
+        // Exercício 1
+        const calcular = (operacao) => {
+            const num1 = document.getElementById("num1_1").value;
+            const num2 = document.getElementById("num2_1").value;
+            const resultado = document.getElementById("resultado");
+
+            if (num1 === "" || num2 === "") {
+                resultado.textContent = "Preencha ambos os campos!";
+                return;
+            }
+
+            const n1 = parseFloat(num1);
+            const n2 = parseFloat(num2);
+            let res;
+
+            switch (operacao) {
+                case '+': res = n1 + n2; break;
+                case '-': res = n1 - n2; break;
+                case '*': res = n1 * n2; break;
+                case '/': res = n2 !== 0 ? n1 / n2 : "Erro: divisão por zero"; break;
+                default: res = "Operação inválida";
+            }
+
+            resultado.textContent = `Resultado: ${res}`;
+        };
+
+        // Exercício 2
+        function exercicio2() {
+            var palavra = document.getElementById("palavra_1").value;
+            var palavraInvertida = palavra.split("").reverse().join("");
+
+            document.getElementById("resultado_2").textContent = "Palavra invertida: " + palavraInvertida;
+        }
+
+        // Exercício 3
+        function exercicio3() {
+            var palavra = document.getElementById("palavra_2").value;
+            var letrasSeparadas = palavra.split("").join(", ");
+
+            document.getElementById("resultado_3").textContent = "Letras separadas: " + letrasSeparadas;
+        }
+
+        // Exercício 4
+        function exercicio4() {
+            var idade = document.getElementById("idade").value;
+
+            if (idade >= 18) {
+                document.getElementById("resultado_4").textContent = "Você pode tirar sua carteira de motorista!";
+            } else {
+                document.getElementById("resultado_4").textContent = "Você ainda não tem idade suficiente para tirar sua carteira de motorista.";
+            }
+        }
+
+        // Exercício 5
+        function exercicio5() {
+            var num1 = parseInt(document.getElementById("num1_2").value);
+            var num2 = parseInt(document.getElementById("num2_2").value);
+            var num3 = parseInt(document.getElementById("num3_2").value);
+
+            var numeros = [num1, num2, num3];
+            numeros.sort(function (a, b) { return a - b; });
+
+            document.getElementById("resultado_5").textContent = "Números em ordem crescente: " + numeros.join(", ");
+        }
+
+        // Exercício 6
+        function exercicio6() {
+            var horas = parseInt(document.getElementById("horas").value);
+
+            if (isNaN(horas)) {
+                document.getElementById("resultado_6").textContent = "Por favor, insira um número válido.";
+                return;
+            }
+
+            var minutos = horas * 60;
+            document.getElementById("resultado_6").textContent = minutos + " minutos";
+        }
+
+
+        // Exercício 7
+        function exercicio7() {
+            var valor = parseInt(document.getElementById("dinheiro").value);
+            var cedulas = [200, 100, 50, 20, 10, 5, 1];
+            var resultado = "";
+
+            for (var i = 0; i < cedulas.length; i++) {
+                var qtdCedulas = Math.floor(valor / cedulas[i]);
+                if (qtdCedulas > 0) {
+                    resultado += qtdCedulas + " nota(s) de R$" + cedulas[i] + "<br>";
+                    valor %= cedulas[i]; // Atualiza o valor restante
+                }
+            }
+
+            document.getElementById("resultado_7").innerHTML = resultado;
+        }
+        // Exercício 8
+        function exercicio8() {
+            var numero = parseFloat(document.getElementById("raiz").value);
+
+            if (numero < 0) {
+                document.getElementById("resultado_8").textContent = "Número inválido! Digite um valor positivo.";
+            } else {
+                var raiz = Math.sqrt(numero);
+                document.getElementById("resultado_8").textContent = "A raiz quadrada de " + numero + " é " + raiz.toFixed(2);
+            }
+        }
+        // Exercício 9
+        function exercicio9() {
+            let nome = document.getElementById("nome").value.trim();
+            let endereco = document.getElementById("endereco").value.trim();
+            let telefone = document.getElementById("telefone").value.trim();
+            let celular = document.getElementById("celular").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let sexo = document.querySelector('input[name="sexo"]:checked');
+
+            if (!nome || !endereco || !telefone || !celular || !email || !sexo) {
+                alert("Todos os campos devem ser preenchidos!");
+                return;
+            }
+
+            document.getElementById("resultado_9").textContent = "Cadastro realizado com sucesso!";
+        }
+        // Exercício 10
+        const calcularImposto = (salario) => {
+            let imposto = 0;
+
+            if (salario <= 1903.98) {
+                imposto = 0;
+            } else if (salario <= 2826.65) {
+                imposto = (salario * 0.075) - 142.80;
+            } else if (salario <= 3751.05) {
+                imposto = (salario * 0.15) - 354.80;
+            } else if (salario <= 4664.68) {
+                imposto = (salario * 0.225) - 636.13;
+            } else {
+                imposto = (salario * 0.275) - 869.36;
+            }
+
+            return imposto;
+        };
+
+        function exercicio10() {
+            let salario = parseFloat(document.getElementById("salario_renda").value);
+
+            if (isNaN(salario) || salario <= 0) {
+                alert("Digite um salário válido!");
+                return;
+            }
+
+            let imposto = calcularImposto(salario);
+            let resultado = document.getElementById("resultado_10");
+
+            if (imposto > 0) {
+                resultado.textContent = "O imposto de renda devido é R$ " + imposto.toFixed(2) + ".";
+            } else {
+                resultado.textContent = "Você está isento do imposto de renda.";
+            }
+        }
+        // Exercício 11
+        const calcularINSS = () => {
+            let salario = parseFloat(document.getElementById("salario_inss").value);
+            let inss = 0;
+
+            if (salario <= 1100) {
+                inss = salario * 0.075;
+            } else if (salario <= 2203.48) {
+                inss = salario * 0.09;
+            } else if (salario <= 3305.22) {
+                inss = salario * 0.12;
+            } else if (salario <= 6433.57) {
+                inss = salario * 0.14;
+            } else {
+                inss = 6433.57 * 0.14;
+            }
+
+            document.getElementById("resultado_11").textContent = "O valor do INSS é R$ " + inss.toFixed(2);
+        }
+        // Exercício 12
+        const calcularJuros = () => {
+            let capital = parseFloat(document.getElementById("capital").value);
+            let taxa = parseFloat(document.getElementById("taxa").value) / 100;
+            let tempo = parseInt(document.getElementById("tempo").value);
+
+            let montante = capital * Math.pow((1 + taxa), tempo);
+
+            document.getElementById("resultado_12").textContent = "O valor final com juros compostos é R$ " + montante.toFixed(2);
+        }
+        // Exercício 13
+        const calcularParcela = () => {
+            let financiamento = parseFloat(document.getElementById("financiamento").value) || 0;
+            let taxa = parseFloat(document.getElementById("taxa").value) / 100 || 0;
+            let parcelas = parseInt(document.getElementById("parcelas").value) || 1;
+
+            if (financiamento <= 0 || parcelas <= 0) {
+                document.getElementById("resultado_13").textContent = "Por favor, insira valores válidos.";
+                return;
+            }
+
+            let parcela = (financiamento * (1 + taxa * parcelas)) / parcelas;
+
+            document.getElementById("resultado_13").textContent =
+                "O valor da parcela é R$ " + parcela.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
