@@ -23,7 +23,6 @@
         <a href="aula02.html">Lógica</a>
         <a href="aula03.html">Funções</a>
         <a href="aula04.html">Array</a>
-        <a href="">Aula 05</a>
     </header>
 
     <!-- Temas Abordado -->
@@ -90,15 +89,29 @@
     <section>
         <main>
             <h1>Exercício 1 - Calculadora</h1>
-            <label>Digite o primeiro número:</label>
-            <input type="number" id="num1_1">
-            <label>Digite o segundo número:</label>
-            <input type="number" id="num2_1">
+            <label>Calculadora:</label>
+            <input type="text" id="resultado" readonly>
             <div class="calc">
-                <button onclick="calcular('+')">+</button>
-                <button onclick="calcular('-')">-</button>
-                <button onclick="calcular('*')">*</button>
-                <button onclick="calcular('/')">/</button>
+                <!-- Primeira fileira -->
+                <button onclick="adicionarNumero('7')">7</button>
+                <button onclick="adicionarNumero('8')">8</button>
+                <button onclick="adicionarNumero('9')">9</button>
+                <button onclick="limpar()">C</button>
+                <!-- Segunda fileira -->
+                <button onclick="adicionarNumero('4')">4</button>
+                <button onclick="adicionarNumero('5')">5</button>
+                <button onclick="adicionarNumero('6')">6</button>
+                <button onclick="adicionarNumero('-')">-</button>
+                <!-- Terceira fileira -->
+                <button onclick="adicionarNumero('1')">1</button>
+                <button onclick="adicionarNumero('2')">2</button>
+                <button onclick="adicionarNumero('3')">3</button>
+                <button onclick="adicionarNumero('+')">+</button>
+                <!-- Quarta fileira -->
+                <button onclick="adicionarNumero(',')">,</button>
+                <button onclick="adicionarNumero('0')">0</button>
+                <button onclick="adicionarNumero('.')">.</button>
+                <button onclick="calcular()">=</button>
             </div>
             <p id="resultado"></p>
         </main>
@@ -273,30 +286,25 @@
 
     <script>
         // Exercício 1
-        const calcular = (operacao) => {
-            const num1 = document.getElementById("num1_1").value;
-            const num2 = document.getElementById("num2_1").value;
-            const resultado = document.getElementById("resultado");
+        let expressao = "";
 
-            if (num1 === "" || num2 === "") {
-                resultado.textContent = "Preencha ambos os campos!";
-                return;
-            }
+        function adicionarNumero(numero) {
+            expressao += numero;
+            document.getElementById("resultado").value = expressao;
+        }
 
-            const n1 = parseFloat(num1);
-            const n2 = parseFloat(num2);
-            let res;
+        function limpar() {
+            expressao = "";
+            document.getElementById("resultado").value = expressao;
+        }
 
-            switch (operacao) {
-                case '+': res = n1 + n2; break;
-                case '-': res = n1 - n2; break;
-                case '*': res = n1 * n2; break;
-                case '/': res = n2 !== 0 ? n1 / n2 : "Erro: divisão por zero"; break;
-                default: res = "Operação inválida";
-            }
+        function calcular() {
+                let resultado = eval(expressao);  
+                //Código que usei de base para facilitar: https://www.w3schools.com/jsref/jsref_eval.asp
+                document.getElementById("resultado").value = resultado;
+                expressao = ""; 
+        }
 
-            resultado.textContent = `Resultado: ${res}`;
-        };
 
         // Exercício 2
         function exercicio2() {

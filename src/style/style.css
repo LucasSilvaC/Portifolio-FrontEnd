@@ -9,7 +9,7 @@ body {
 
 section{
     max-width: 1400px;
-    margin: 100px auto;
+    margin: 80px auto;
     height: auto;
 }
 
@@ -21,9 +21,8 @@ section main {
 
 section main h1 {
     padding: 20px;
-    color: white;
     font-size: 37px;
-    color: black;
+    color: #242424;
 }
 
 section main img{
@@ -33,9 +32,8 @@ section main img{
 
 section main p {
     padding: 0 20px;
-    color: white;
     font-size: 22px;
-    color: black;
+    color: #242424;
 }
 
 section main button {
@@ -90,19 +88,130 @@ input::placeholder {
 input:hover {
     border-color: #1a9bd1;
 }
+/* Home Banner */
+.container {
+    max-width: 100%; 
+    margin: 20px auto;
+    height: auto;
+    display: flex; 
+    align-items: center;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 100%; 
+    height: auto;
+    margin: 10px;
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+    max-width: 450px; 
+    height: auto;
+    border-radius: 50%;
+}
+
+.box h1 {
+    padding: 20px;
+    font-size: 3rem; 
+    color: #242424;
+}
+
+.box p {
+    padding: 0 20px;
+    font-size: 1.25rem; 
+    color: #242424;
+    line-height: 1.6;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center; 
+    text-align: center; 
+    flex-wrap: wrap; 
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icons p {
+    font-size: 1.5rem;
+    width: 100%; 
+    text-align: center;
+}
+
+.icons img {
+    border-radius: 0%;
+    width: 70px; 
+    height: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.1); 
+}
+
+.repo-box {
+    background-color: #242424;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    width: 100%; 
+    max-width: 400px; 
+    padding: 15px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.repo-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.repo-header a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #c265dc;
+}
+
+.repo-header a:hover {
+    text-decoration: underline;
+}
+
+.repo-description {
+    font-size: 0.875rem; 
+    color: #8b949e;
+    margin: 5px 0 10px;
+}
+
+.repo-footer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.repo-footer span {
+    font-size: 0.875rem;
+    color: #8b949e;
+}
+
+hr {
+    width: 100%; 
+    border: none;
+    border-top: 1px solid #242424; 
+    margin: 10px 0; 
+}
 
 /* Header */
 header {
-    background: linear-gradient(to right, 
-        #a51217, 
-        #d30712, 
-        #6b2b7d, 
-        #2e358e, 
-        #1b6aa3,
-        #1a9bd1, 
-        #148b50,
-        #4caf50 
-    );
     padding: 20px;
     display: flex;
     align-items: center;
@@ -110,7 +219,7 @@ header {
 }
 
 .bi-house {
-    fill: rgb(255, 255, 255); 
+    color: #242424; 
     width: 40px; 
     height: 40px;
     cursor: pointer;
@@ -121,11 +230,12 @@ header a {
     text-decoration: none;
     font-size: 22px;
     margin: 10px;
-    padding: 10px 20px;
+    padding: 10px 80px;
     display: inline-block;
     border-radius: 5px;
     transition: font-size 0.3s;
     position: relative;
+    color: #242424;
 }
 
 header a:hover {
@@ -137,9 +247,9 @@ header a::after {
     position: absolute;
     left: 50%;
     bottom: -5px;
-    width: 100%;
+    width: 60%;
     height: 2px;
-    background-color: #ffffff;
+    background-color: #242424;
     opacity: 0;
     transform: translateX(-50%);
 }
@@ -149,6 +259,7 @@ header a:hover::after {
     animation: blink 2s infinite;
 }
 
+/* Efeito de piscar na tag <a> */
 @keyframes blink {
     0%, 100% {
         opacity: 0;
@@ -174,18 +285,35 @@ ol{
     opacity: 80%;
 }
 /* Aula03 */
-.calc button{
-    background-color: #148b50;
+.calc {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 5px;
+    max-width: 50%;
+}
+
+.calc button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid  #ccc;
+    color: #242424;
+    width: 50px; 
+    height: 50px; 
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calc button svg {
+    width: 24px; 
+    height: 24px;
 }
 
 .calc button:hover {
-    background-color: #0c7440;
+    background-color: #ccc;
     transform: scale(1.05);
-}
-
-.calc button:active {
-    background-color:  #06502b;
-    transform: scale(0.95);
 }
 
 .radio-container {
@@ -271,4 +399,89 @@ ol{
 }
 .line {
     margin: 5px 0;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 500px) {
+    header {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header a {
+        font-size: 18px;
+        padding: 8px 20px;
+        margin: 5px 0;
+    }
+
+    .bi-house {
+        width: 30px;
+        height: 30px;
+    }
+    section main img{
+        width: 100%;
+        height: 250px;
+    }
+    .cmd {
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .box {
+        max-width: 90%;
+    }
+
+    .box h1 {
+        font-size: 2.5rem;
+    }
+
+    .box p {
+        font-size: 1rem;
+    }
+
+    .icons {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .icons img {
+        width: 50px;
+    }
+
+    .repo-box {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 170px) {
+    section main h1 {
+        font-size: 30px;
+    }
+    .box img {
+        width: 80%; 
+    }
+
+    .box h1 {
+        font-size: 1.8rem;
+    }
+
+    .box p {
+        font-size: 0.9rem;
+    }
+
+    .icons p {
+        font-size: 1rem;
+    }
+
+    .icons img {
+        width: 40px; 
+    }
 }

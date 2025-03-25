@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- Linkagem -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linkagem da font, favicon e o style -->
     <link rel="stylesheet" href="src/style/style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="src/img/front_icon.png">
@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- Header com a linkagem de todas as lições para navegação -->
     <header>
         <a href="../../index.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-house" viewBox="0 0 16 16">
@@ -22,10 +23,73 @@
         <a href="./src/html/aula02.html">Lógica</a>
         <a href="./src/html/aula03.html">Funções</a>
         <a href="./src/html/aula04.html">Array</a>
-        <a href="">Aula 05</a>
+        <a href="https://github.com/LucasSilvaC">Github</a>
     </header>
 
-    <!-- Ui/UX -->
+
+    <!-- Introdução ao site -->
+    <div class="container">
+        <div class="box">
+            <img
+                src="https://avatars.githubusercontent.com/u/114783200?s=400&u=a80def3fc219de5bcbfa956496bab93c896e06d5&v=4">
+        </div>
+        <div class="box" style="margin-left: 60px;">
+            <h1>Lucas Camargo</h1>
+            <p>Eu sou um desenvolvedor de Softwares que atuo na Robert Bosch LTDA. Eu gosto de programar tanto BackEnd quanto FrontEnd e se 
+                arriscando em algumas aplicações mobiles.</p>
+            <hr>
+            <div class="icons">
+                <p>Minhas especialidades</p>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-plain.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"" />
+                <img src=" https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Projetos que estou trabalhando atualmente -->
+    <section>
+        <main>
+            <h1>Projetos Atuais</h1>
+            <div class="repo-box">
+                <div class="repo-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-folder" viewBox="0 0 16 16">
+                        <path
+                            d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139q.323-.119.684-.12h5.396z" />
+                    </svg>
+                    <a href="https://github.com/LucasSilvaC/API-Escola">API-Escola</a>
+                </div>
+                <p class="repo-description">Project for Senai Mange.</p>
+                <div class="repo-footer">
+                    <div class="dot yellow"></div>
+                    <span>Javascript</span>
+                </div>
+            </div>
+
+            <div class="repo-box">
+                <div class="repo-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-folder" viewBox="0 0 16 16">
+                        <path
+                            d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139q.323-.119.684-.12h5.396z" />
+                    </svg>
+                    <a href="https://github.com/LucasSilvaC/BugCode">BugCode</a>
+                </div>
+                <p class="repo-description">Project for Etec.</p>
+                <div class="repo-footer">
+                    <div class="dot red"></div>
+                    <span>HTML</span>
+                </div>
+            </div>
+
+        </main>
+    </section>
+
+    <!-- Section para ir a lição de Ui/UX -->
     <section>
         <main>
             <h1>Aula 01 - UI/UX</h1>
@@ -34,7 +98,7 @@
         </main>
     </section>
 
-    <!-- Lógica -->
+    <!-- Section para ir a lição de Lógica -->
     <section>
         <main>
             <h1>Aula 02 - Lógica</h1>
@@ -43,7 +107,7 @@
         </main>
     </section>
 
-    <!-- Funções -->
+    <!-- Section para ir a lição de Funções -->
     <section>
         <main>
             <h1>Aula 03 - Funções</h1>
@@ -52,8 +116,8 @@
         </main>
     </section>
 
-     <!-- Array -->
-     <section>
+    <!-- Section para ir a lição de Array -->
+    <section>
         <main>
             <h1>Aula 04 - Arrays</h1>
             <p>Exercícios dos números 01 a 12 em Javascript sobre Arrays</p>
